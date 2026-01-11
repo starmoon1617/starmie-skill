@@ -7,9 +7,9 @@ AI 编码助手的 Skill 文件集合，用于在使用 GitHub Copilot 和 Claud
 ```
 starmie-skill/
 ├── README.md                    # 本文件 - 项目说明和使用指南
-├── copilot/                     # GitHub Copilot 配置文件
+├── .copilot/                     # GitHub Copilot 配置文件
 │   └── copilot-instructions.md  # Copilot 指令文件
-├── claude/                      # Claude Code 配置文件
+├── .claude/                      # Claude Code 配置文件
 │   └── starmie.md              # Claude 规则文件
 └── docs/                        # 详细文档
     ├── starmie-framework-skill.md   # 完整 API 参考文档
@@ -20,24 +20,24 @@ starmie-skill/
 
 ### GitHub Copilot 配置
 
-1. 将 `copilot/copilot-instructions.md` 复制到你的项目根目录的 `.github/` 文件夹下：
+1. 将 `.copilot/copilot-instructions.md` 复制到你的项目根目录的 `.github/` 文件夹下：
 
 ```bash
 # 在你的项目根目录执行
 mkdir -p .github
-cp path/to/starmie-skill/copilot/copilot-instructions.md .github/
+cp path/to/starmie-skill/.copilot/copilot-instructions.md .github/
 ```
 
 2. 重启 VS Code 或 IDE，Copilot 将自动加载这些指令。
 
 ### Claude Code 配置
 
-1. 将 `claude/starmie.md` 复制到你的项目根目录的 `.claude/` 文件夹下：
+1. 将 `.claude/starmie.md` 复制到你的项目根目录的 `.claude/` 文件夹下：
 
 ```bash
 # 在你的项目根目录执行
 mkdir -p .claude
-cp path/to/starmie-skill/claude/starmie.md .claude/
+cp path/to/starmie-skill/.claude/starmie.md .claude/
 ```
 
 2. Claude Code 将在会话中自动应用这些规则。
@@ -49,19 +49,19 @@ cp path/to/starmie-skill/claude/starmie.md .claude/
 **GitHub Copilot:**
 ```bash
 # Windows
-copy copilot\copilot-instructions.md %USERPROFILE%\.github\copilot-instructions.md
+copy .copilot\copilot-instructions.md %USERPROFILE%\.github\copilot-instructions.md
 
 # macOS/Linux
-cp copilot/copilot-instructions.md ~/.github/copilot-instructions.md
+cp .copilot/copilot-instructions.md ~/.github/copilot-instructions.md
 ```
 
 **Claude Code:**
 ```bash
 # Windows
-copy claude\starmie.md %USERPROFILE%\.claude\starmie.md
+copy .claude\starmie.md %USERPROFILE%\.claude\starmie.md
 
 # macOS/Linux
-cp claude/starmie.md ~/.claude/starmie.md
+cp .claude/starmie.md ~/.claude/starmie.md
 ```
 
 ## ⚡ 触发条件
